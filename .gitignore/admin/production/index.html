@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>moveboard</title>
+
+  <!-- Bootstrap -->
+  <link href="../build/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+
+  <link href="../build/css/parking page.css" rel="stylesheet">
+  <!-- NProgress -->
+  <link href="../build/css/nprogress.css" rel="stylesheet">
+  <link href="../build/css/custom.min.css" rel="stylesheet">
+</head>
+
+<body class="nav-md">
+<div class="container body">
+  <div class="main_container">
+    <div class="col-md-3 left_col">
+      <div class=" scroll-view">
+        <div class="navbar nav_title" style="border: 0;">
+        </div>
+
+        <div class="clearfix"></div>
+
+        <!-- menu profile quick info -->
+        <div class="profile clearfix">
+          <div class="profile_info">
+            <span style="padding-left:16px;font-size:26px">Welcome,Ann</span>
+          </div>
+        </div>
+        <!-- /menu profile quick info -->
+
+        <br />
+
+        <!-- sidebar menu -->
+        <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+          <div class="menu_section">
+            <h3>车流量管理</h3>
+            <ul class="nav side-menu">
+              <li><a href="parking page.html"><i class="fa fa-edit"></i> 设备管理 <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                  <li><a href="parking page.html">地磁管理</a></li>
+                  <li><a href="parking page1.html">地磁统计</a></li>
+                  <li><a href="parking page2.html">维修记录</a></li>
+                </ul>
+              </li>
+              <li><a><i class="fa fa-desktop"></i>车流量管理 <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                  <li><a href="car total.html">车辆统计</a></li>
+                  <li><a href="em.html">地磁管理</a></li>
+                </ul>
+              </li>
+              <li><a><i class="fa fa-bar-chart-o"></i> 用户管理 <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                  <li><a href="person.html">个人信息</a></li>
+                  <li><a href="information.html">车辆信息</a></li>
+                </ul>
+              </li>
+              <li><a><i class="fa fa-clone"></i>系统管理 <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                  <li><a href="areas.html">区域管理</a></li>
+                  <li><a href="block.html">用户增删</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- /sidebar menu -->
+
+        <!-- /menu footer buttons -->
+      </div>
+    </div>
+
+    <!-- top navigation -->
+    <div class="top_nav">
+      <div class="nav_menu">
+        <nav>
+          <div class="nav toggle">
+            <a id="menu_toggle"><i class="fa fa-bars"> <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></i></a><a>智慧流量信息管理平台</a>
+          </div>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li class="">
+              <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Ann
+                <span class=" fa fa-angle-down"></span>
+              </a>
+              <ul class="dropdown-menu dropdown-usermenu pull-right">
+                <li><a href="javascript:;">帮助</a></li>
+                <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> 退出</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- /top navigation -->
+
+    <!-- page content -->
+    <div class="right_col" role="main">
+      <div class="row">
+        <div class="col-md-12">
+          <div id="main" class="blue" style="overflow:hidden; overflow-x:hidden">
+            <div class="main_right">
+              <div class="right2">
+                <!--内容开始-->
+                <div class="content" style="padding:10px;">
+                  <!--列表搜索开始-->
+                  <div class="selectbox">
+                    <!-- 关键字搜索开始 -->
+                    <ul class="option">
+                      <div class="form-inline" id="queryForm" >
+                        <div class="form-group form-group-sm">
+                          设备自带编码：
+                          <input class=" form-control" name="deviceSelfCode" id="deviceSelfCode" type="text" />
+                        </div>
+                        <div class="form-group form-group-sm">
+                          状态：
+
+                          <select name="status" id="status"> <option value="" selected="selected">---请选择--- </option> <option value="1">正常工作 </option> <option value="2">异常 </option> <option value="3">关闭 </option></select>
+                        </div>
+                        <div class="form-group form-group-sm">
+                          关联位置：
+                          <input class=" form-control" name="stallCode" id="stallCode" type="text" />
+                        </div>
+                        <div class="btn-group">
+                          <button class="btn blue search" onclick="queryRecList('',true)">搜 索</button>
+                        </div>
+                      </div>
+                    </ul>
+                    <!-- 关键字搜索结束 -->
+                    <!-- 区域搜索开始 -->
+                    <div id="subnavibox">
+                    </div>
+                    <!-- 区域搜索结束 -->
+                  </div>
+                  <!--列表搜索结束-->
+                  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">筛选</button>
+                  <div class="collapse" id="collapseExample">
+                    <div class="well" class="disn">
+                      <ul style="width:100%;">
+                        <div class="reset_select col-xs-offset-10">
+                          <div class="btn-group ">
+                            <button class="btn blue" id="subnavi_reset">重置筛选</button>
+                          </div>
+                        </div>
+                        <dl id="SubNavi_city"  class="dl-horizontal">
+                          <dl>
+                            <dt>城&nbsp;&nbsp;&nbsp;市：</dt>
+                            <dd class="list-inline" >全部</dd>
+                            <dd class="list-inline"><span id="3505" class="active">各区域城市</span></dd>
+                          </dl>
+                        </dl>
+                        <dl id="SubNavi_area" class="dl-horizontal">
+                          <dl>
+                            <dt>区&nbsp;&nbsp;&nbsp;域：</dt>
+                            <dd><span class="active" id="areaall" onclick="">全部</span></dd>
+                            <dd><span id="350506" class="">任丘市</span></dd>
+                          </dl>
+                        </dl>
+                        <dl id="SubNavi_dist" class="dl-horizontal">
+                          <dl>
+                            <dt>片&nbsp;&nbsp;&nbsp;区：</dt>
+                            <dd><span class="active" id="distall" onclick="">全部</span></dd>
+                            <dd><span id="35050601" class="">中山路</span></dd>
+                          </dl>
+                        </dl>
+                        <dl id="SubNavi_park" class="dl-horizontal">
+                          <dl>
+                            <dt>停车场：</dt>
+                            <dd><span class="active" id="parkall" onclick="">全部</span></dd>
+                            <div class=" clearfix"></div>
+                          </dl>
+                        </dl>
+
+                      </ul>
+                    </div>
+                  </div>
+                  <!--统计开始-->
+                  <div class="exhibition">
+                    <span><i class="pic11"></i>地磁传感器共：<font class="font-green" id="totals"></font>个</span><span class="f12">|</span>
+                    <span><img src="images/green.gif"></i>正常：<font class="font-green" id="normal"></font>个</span><span class="f12">|</span>
+                    <span><i><img src="images/red.png"></i>异常：<font class="font-red" id="abnormal"></font>个</span><span class="f12">|</span>
+                    <span><i><img src="images/yellow.png"></i>关闭：<font class="yellow" id="closeSensor"></font>个</span><span class="f12">|</span>
+                    <div class=""></div>
+                  </div>
+                  <!--统计结束-->
+                  <!-- 列表按钮开始 -->
+                  <div class="buttonbox">
+                    <button class="btn btn-sm btn-default" onclick="add('新增地磁传感器','sensorController.do?goAdd','',800,450)"><span class="glyphicon glyphicon-plus green"></span>录入</button>
+                    <button class="btn btn-sm btn-default" onclick="updateRec('编辑地磁传感器','sensorController.do?goUpdate')"><span class="glyphicon glyphicon-edit blue"></span>编辑</button>
+                    <button class="btn btn-sm btn-default" onclick="readRec('查看地磁传感器','sensorController.do?goUpdate')"><span class="glyphicon glyphicon-search blue"></span>查看</button>
+                    <button class="btn btn-sm btn-default" onclick="deleteObj()"><span class="glyphicon glyphicon-remove-circle red"></span>删除</button>
+                    <button class="btn btn-sm btn-default" onclick="optSelectedRow('sensorController.do?doSycRedis','more')"><span class="glyphicon glyphicon-edit blue"></span>同步缓存</button>
+                    <div class="clearfix">
+                      <table id="listTbl" class="table table-bordered table-striped table-hover table-responsive" cellspacing="0" cellpadding="0">
+                        <tbody>
+                        <tr><th width="3%"><input type="checkbox" id="checkListAll" onclick="checkListAll1(this,'listTbl')"></th>
+                          <th width="6%" onclick="sortColumn('status',this)">状态<span id="statusSpan" class="glyphicon fr"></span></th>
+                          <th width="10%" onclick="sortColumn('deviceSelfCode',this)">设备编码<span id="deviceSelfCodeSpan" class="glyphicon fr"></span></th>
+                          <th width="14%">所属车位</th>
+                          <th width="9%" onclick="sortColumn('baseStationCode',this)">所属基站<span id="baseStationCodeSpan" class="glyphicon fr"></span></th>
+                          <th width="15%" onclick="sortColumn('areaName',this)">所属片区<span id="areaNameSpan" class="glyphicon fr"></span></th>
+                          <th width="20%" onclick="sortColumn('parkName',this)">所属停车场<span id="parkNameSpan" class="glyphicon fr"></span></th><th width="10%" onclick="sortColumn('lastBeatTime',this)">最后心跳时间<span id="lastBeatTimeSpan" class="glyphicon fr"></span></th><th width="12%">异常日志</th>
+                        </tr>
+                        </tbody>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /page content -->
+</div>
+
+<!-- calendar modal -->
+<div id="CalenderModalNew" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title" id="myModalLabel">New Calendar Entry</h4>
+      </div>
+      <div class="modal-body">
+        <div id="testmodal" style="padding: 5px 20px;">
+          <form id="antoform" class="form-horizontal calender" role="form">
+            <div class="form-group">
+              <label class="col-sm-3 control-label">Title</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" id="title" name="title">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-3 control-label">Description</label>
+              <div class="col-sm-9">
+                <textarea class="form-control" style="height:55px;" id="descr" name="descr"></textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default antoclose" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary antosubmit">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="fc_create" data-toggle="modal" data-target="#CalenderModalNew"></div>
+<div id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit"></div>
+<!-- /calendar modal -->
+
+<!-- jQuery -->
+<script src="../build/js/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="../build/js/bootstrap.min.js"></script>
+
+
+<!-- Custom Theme Scripts -->
+<script src="../build/js/custom.min.js"></script>
+
+</body>
+</html>

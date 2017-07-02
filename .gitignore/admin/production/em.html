@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>moveboard</title>
+
+    <!-- Bootstrap -->
+    <link href="../build/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+
+    <link href="../build/css/parking page.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="../build/css/nprogress.css" rel="stylesheet">
+    <link href="../build/css/custom.min.css" rel="stylesheet">
+    <link href="../build/css/areas.css" rel="stylesheet">
+</head>
+
+<body class="nav-md">
+<div class="container body">
+    <div class="main_container">
+        <div class="col-md-3 left_col">
+            <div class=" scroll-view">
+                <div class="navbar nav_title" style="border: 0;">
+                </div>
+
+                <div class="clearfix"></div>
+
+                <!-- menu profile quick info -->
+                <div class="profile clearfix">
+                    <div class="profile_info">
+                        <span style="padding-left:16px;font-size:26px">Welcome,Ann</span>
+                    </div>
+                </div>
+                <!-- /menu profile quick info -->
+
+                <br />
+
+                <!-- sidebar menu -->
+                <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                    <div class="menu_section">
+                        <h3>车流量管理</h3>
+                        <ul class="nav side-menu">
+                            <li><a href="parking page.html"><i class="fa fa-edit"></i> 设备管理 <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="parking page.html">地磁管理</a></li>
+                                    <li><a href="parking page1.html">地磁统计</a></li>
+                                    <li><a href="parking page2.html">维修记录</a></li>
+                                </ul>
+                            </li>
+                            <li><a><i class="fa fa-desktop"></i>车流量管理 <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="car total.html">车辆统计</a></li>
+                                    <li><a href="em.html">地磁管理</a></li>
+                                </ul>
+                            </li>
+                            <li><a><i class="fa fa-bar-chart-o"></i> 用户管理 <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="person.html">个人信息</a></li>
+                                    <li><a href="information.html">车辆信息</a></li>
+                                </ul>
+                            </li>
+                            <li><a><i class="fa fa-clone"></i>系统管理 <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="areas.html">区域管理</a></li>
+                                    <li><a href="block.html">用户增删</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /sidebar menu -->
+
+                <!-- /menu footer buttons -->
+            </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+            <div class="nav_menu">
+                <nav>
+                    <div class="nav toggle">
+                        <a id="menu_toggle"><i class="fa fa-bars"> <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></i></a><a>智慧流量信息管理平台</a>
+                    </div>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="">
+                            <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Ann
+                                <span class=" fa fa-angle-down"></span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-usermenu pull-right">
+                                <li><a href="javascript:;">帮助</a></li>
+                                <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> 退出</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- /page content -->
+</div>
+<div id="left" style="width:200px; height:680px; position:absolute; left:282px; top:80px;font-size:24px;">
+    <ul id="treeDemo" class="ztree" style="overflow-y: scroll;height: 570px;">
+        <h2>杭州市道路</h2>
+        <li>
+            <ul>
+                <h4 data-toggle="collapse" data-target="#show2" class="glyphicon glyphicon-chevron-down">同协路</h4>
+                <ul class="panel-collapse" >
+                    <div id="show2" class="panel-body collapse" >
+                        <li>同协路-临丁路路口</li>
+                        <li>同协路-大农港西路路口</li>
+                        <li>同协路-华丰路路口</li>
+                        <li>同协路-天成路路口</li>
+                        <li >同协路-机场路路口</li>
+                        <li >同协路-石大路路口</li>
+                    </div>
+
+                </ul>
+            </ul>
+            <ul>
+                <h4 data-toggle="collapse" data-target="#show3" class="glyphicon glyphicon-chevron-down">九睦路</h4>
+                <ul class="panel-collapse">
+                    <div class="panel-body collapse" id="show3">
+                        <li>九睦路-金河街</li>
+                        <li>九睦路-九桥路</li>
+                        <li>九睦路-银河街</li>
+                        <li>九睦路-金宝街</li>
+                        <li>九睦路-银堡街</li>
+                    </div>
+
+                </ul>
+            </ul>
+            <ul>
+                <h4 data-toggle="collapse" data-target="#show4" class="glyphicon glyphicon-chevron-down">仁爱路</h4>
+                <ul class="panel-collapse">
+                    <div class="panel-body collapse" id="show4">
+                        <li >仁爱路-金河街</li>
+                        <li >仁爱路-九桥路</li>
+                        <li>仁爱路-金宝街</li>
+                        <li>仁爱路-银堡街</li>
+                    </div>
+                </ul>
+            </ul>
+            <ul>
+                <h4 data-toggle="collapse" data-target="#show5" class="glyphicon glyphicon-chevron-down">西园四路</h4>
+                <ul class="panel-collapse">
+                    <div class="panel-body collapse" id="show5">
+                        <li>西园四路-西园五路</li>
+                        <li>西园四路-西园二路</li>
+                    </div>
+                </ul>
+            </ul>
+            <ul>
+                <h4 data-toggle="collapse" data-target="#show6" class="glyphicon glyphicon-chevron-down">浙江省</h4>
+                <ul class="panel-collapse">
+                    <div class="panel-body collapse" id="show6">
+                        <li>丽水</li></li>
+                    </div>
+                </ul>
+            </ul>
+
+        </li>
+    </ul>
+</div>
+<!-- calendar modal -->
+<div id="CalenderModalNew" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">New Calendar Entry</h4>
+            </div>
+            <div class="modal-body">
+                <div id="testmodal" style="padding: 5px 20px;">
+                    <form id="antoform" class="form-horizontal calender" role="form">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Title</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="title" name="title">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Description</label>
+                            <div class="col-sm-9">
+                                <textarea class="form-control" style="height:55px;" id="descr" name="descr"></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default antoclose" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary antosubmit">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="fc_create" data-toggle="modal" data-target="#CalenderModalNew"></div>
+<div id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit"></div>
+<!-- /calendar modal -->
+
+<!-- jQuery -->
+<script src="../build/js/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="../build/js/bootstrap.min.js"></script>
+
+
+<!-- Custom Theme Scripts -->
+<script src="../build/js/custom.min.js"></script>
+
+</body>
+</html>
